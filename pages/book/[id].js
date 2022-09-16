@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchThisBookData } from "../../slices/thisBookSlice";
 import { useRouter } from "next/router";
 
-export default function bookId() {
+export default function bookid() {
   const router = useRouter();
 
   const book = useSelector((state) => state.thisBook.thisBook);
@@ -29,7 +29,6 @@ export default function bookId() {
     );
   }
 
-  console.log(book);
   return (
     <div>
       <Container>
@@ -56,7 +55,7 @@ export default function bookId() {
             )}
             <div className="this_book__autors">
               <strong>
-                {book?.volumeInfo?.authors.length === 1 ? (
+                {book?.volumeInfo?.authors?.length === 1 ? (
                   <>Автор </>
                 ) : (
                   <>Авторы: </>
