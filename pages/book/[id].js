@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchThisBookData } from "../../slices/thisBookSlice";
 import { useRouter } from "next/router";
 
-export default function bookid() {
+export default function Bookid() {
   const router = useRouter();
 
   const book = useSelector((state) => state.thisBook.thisBook);
